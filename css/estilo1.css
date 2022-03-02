@@ -1,0 +1,369 @@
+* {
+    top: 0;
+    left: 0;
+    margin: auto;
+}
+
+:root {
+    --main-color-bg: #ffffff;
+    --main-color-nav: #10002b;
+    --main-color-nav-a: #6fffe9;
+    --main-color-txt: #10002b;
+    --main-color-h2: #10002b;
+    --main-color-h3: #10002b;
+    --main-color-indicadores: #10002b;
+}
+
+/*
+Colores #ffffff
+#10002b
+
+Azul Oscuro         #0B132B    11, 19, 43
+Azul Marino         #1C2541    28, 37, 65
+Auzul Marino Pastel #3A506B    58, 80, 107
+Azul Cielo          #5BC0BE    91, 192, 190
+Azul Celeste        #6FFFE9    111, 255, 233
+
+*/
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--main-color-bg);
+    color: var(--main-color-txt);
+}
+
+h2 {
+    color: var(--main-color-h2);
+    font-weight: 900;
+}
+
+h3 {
+    color: var(--main-color-h3);
+}
+
+/*CABECERA Y BARRA DE NAVEGACIÓN*/
+#cab {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    background-color: var(--main-color-nav);
+}
+
+.contenedor {
+    margin: auto;
+    overflow: hidden;
+    width: 70%;
+    height: 75px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.nav,
+.redes_nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav a,
+.redes_nav a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+}
+
+.nav a:hover,
+.redes_nav a:hover {
+    color: var(--main-color-nav-a);
+    font-weight: 700;
+}
+
+.redes_nav i {
+    font-size: 25px;
+}
+
+
+/*CUERPO*/
+.ancla {
+    background: none;
+}
+
+#cuer {
+    width: 85%;
+    margin: auto;
+    padding-top: 125px;
+    padding-bottom: 100px;
+    /*box-shadow: 0px 0px 90px black;*/
+}
+
+.bloque {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.bloque table td,
+.bloque table td h3 {
+    padding: 0 20px;
+}
+
+.curripdf {
+    background-color: var(--main-color-nav);
+    width: 40%;
+    height: 500px;
+
+}
+
+/* VIDEO DE PRESENTACIÓN*/
+.sec__video {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+#video1 {
+    position: relative;
+    top: -100px;
+    width: 100%;
+    margin: auto;
+}
+
+
+/* TEXTO DE BIENVENIDA*/
+
+.bienvenida {
+    text-align: center;
+    width: 300px;
+    padding: 15px;
+}
+
+
+/*GALERÍA CONTENERDOR PRINCIPAL Y FLECHAS*/
+.carousel {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.carousel__contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carousel__anterior,
+.carousel__anterior__img,
+.carousel__anterior__ani,
+.carousel__siguiente,
+.carousel__siguiente__img,
+.carousel__siguiente__ani {
+    border: none;
+    background: none;
+    font-size: 35px;
+    line-height: normal;
+    color: var(--main-color-indicadores);
+    cursor: pointer;
+}
+
+/*CARRUSEL*/
+
+.carousel__elemento {
+    text-align: center;
+    padding: 10px;
+}
+
+.carousel__elemento img:hover {
+    transform: scale(1.03);
+    transform-origin: center;
+    box-shadow: 0px 0px 10px var(--main-color-nav);
+}
+
+.carousel__lista {
+    display: flex;
+}
+
+.carousel__indicadores .glider-dot,
+.carousel__indicadores__img .glider-dot,
+.carousel__indicadores__ani .glider-dot {
+    display: block;
+    width: 20px;
+    height: 10px;
+    background-color: var(--main-color-indicadores);
+    opacity: .3;
+    border-radius: 10px;
+}
+
+.carousel__indicadores .glider-dot:hover,
+.carousel__indicadores__img .glider-dot:hover,
+.carousel__indicadores__ani .glider-dot:hover {
+    opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active,
+.carousel__indicadores__img .glider-dot.active,
+.carousel__indicadores__ani .glider-dot.active {
+    opacity: 1;
+}
+
+/* CONTACTO */
+.contacto {
+    display: flex;
+    width: 40%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color-txt);
+}
+
+.contacto_txt {
+    text-align: center;
+}
+
+#foto img {
+    margin-right: 50px;
+    width: 250px;
+    border-radius: 50%;
+}
+
+
+
+#redes {
+    font-size: 30px;
+}
+
+#redes a {
+    color: #10002b;
+}
+
+#redes a:hover {
+    color: var(--main-color-nav-a);
+}
+
+/*PIE DE PÁGINA*/
+footer {
+    background-color: var(--main-color-nav);
+    position: relative;
+    bottom: 0;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+.colon {
+    line-height: 20px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 20px;
+}
+.colon img {
+    width: 30px;
+}
+
+/* RESPONSIVE*/
+
+@media screen and (max-width: 850px) {
+
+    body {
+        max-width: 100%;
+    }
+
+    #cab {
+        z-index: 1;
+        position: fixed;
+        width: 100%;
+        background-color: var(--main-color-nav);
+    }
+
+    .contenedor {
+        padding: 10px 0px;
+        margin: auto;
+        overflow: visible;
+        width: auto;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .logo {
+        font-weight: 900;
+        font-size: 30px;
+        color: #ffffff;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .redes_nav {
+        display: none;
+    }
+
+    .nav a,
+    .redes_nav a {
+        text-decoration: none;
+        color: white;
+        padding: 5px 10px;
+    }
+
+    #cuer {
+        width: 100%;
+        display: block;
+    }
+
+    .sec__video {
+        max-width: 100vh;
+        height: 250px;
+        overflow: hidden;
+    }
+
+    #video1 {
+        position: relative;
+        top: 0px;
+        width: 100%;
+    }
+
+    .bienvenida {
+    }
+
+    .bloque {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    .bloque table td,
+    .bloque table td h3 {
+        padding: 0 0px;
+    }
+
+    .curripdf {
+        background-color: var(--main-color-nav);
+        width: 95%;
+        height: 50vh;
+    }
+
+    .carousel {}
+
+    .contacto {
+        width: auto;
+        display: block;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    #foto img {
+        margin-right: 0px;
+    }
+
+    .contacto a {}
+
+}

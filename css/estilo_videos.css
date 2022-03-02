@@ -1,0 +1,185 @@
+* {
+    top: 0;
+    left: 0;
+}
+
+:root {
+    --main-color-nav: #10002b;
+    --main-color-nav-a: #6fffe9;
+    --main-color-txt: #10002b;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: auto;
+    color: var(--main-color-txt);
+}
+
+/*CABECERA Y BARRA DE NAVEGACIÓN*/
+#cab {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    background-color: var(--main-color-nav);
+}
+
+.contenedor {
+    margin: auto;
+    overflow: hidden;
+    width: 75%;
+    height: 75px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.nav,
+.redes_nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav a,
+.redes_nav a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+}
+
+.nav a:hover,
+.redes_nav a:hover {
+    color: var(--main-color-nav-a);
+    font-weight: 700;
+}
+
+.redes_nav i {
+    font-size: 25px;
+}
+
+/*CUERPO*/
+
+#cuer {
+    width: 80%;
+    display: flex;
+    min-height: 90vh;
+    margin: auto;
+    padding-top: 100px;
+    /*box-shadow: 0px 0px 90px black;*/
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+.info {
+    padding: 25px 0 25px 0;
+    width: 40%;
+    text-align: center;
+}
+
+.video_txt {
+    text-align: start;
+    padding: 25px;
+}
+
+iframe {
+    max-width: 100%;
+    min-height: 100%;
+}
+
+/*PIE DE PÁGINA*/
+
+footer {
+    position: relative;
+    bottom: 0;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+
+.colon {
+    line-height: 20px;
+    background-color: var(--main-color-nav);
+    text-align: center;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 20px;
+}
+
+.colon img {
+    width: 30px;
+}
+@media screen and (max-width: 992px) {}
+
+.contenedor {
+    margin: auto;
+    padding: 10px 0px;
+    overflow: visible;
+    width: auto;
+    display: flex;
+    flex-flow: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 30px;
+    color: #ffffff;
+    display: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.redes_nav {}
+
+.nav a,
+.redes_nav a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+}
+
+#cuer {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 0px;
+    margin-top: 100px;
+}
+
+.video {
+    width: 95%;
+    display: block;
+    text-align: center;
+}
+
+.info {
+    width: auto;
+    margin: auto;
+}
+
+.video_txt {
+    text-align: center;
+    width: auto;
+    margin: auto;
+    display: block;
+}
+
+iframe {
+    max-width: 95%;
+    max-height: 50vh;
+}

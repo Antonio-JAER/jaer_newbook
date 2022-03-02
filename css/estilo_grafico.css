@@ -1,0 +1,261 @@
+* {
+    top: 0;
+    left: 0;
+    margin: auto;
+}
+
+:root {
+    --main-color-nav: #10002b;
+    --main-color-nav-a: #6fffe9;
+    --main-color-txt: #10002b;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: var(--main-color-txt);
+}
+
+/*CABECERA Y BARRA DE NAVEGACIÓN*/
+#cab {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    background-color: var(--main-color-nav);
+}
+
+.contenedor {
+    margin: auto;
+    overflow: hidden;
+    width: 75%;
+    height: 75px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.nav,
+.redes_nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav a,
+.redes_nav a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+}
+
+.nav a:hover,
+.redes_nav a:hover {
+    color: var(--main-color-nav-a);
+    font-weight: 700;
+}
+
+.redes_nav i {
+    font-size: 25px;
+}
+
+
+
+/*CUERPO*/
+
+.cuer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.video_txt {
+    text-align: center;
+}
+
+/*Galeria de Imagenes*/
+
+#galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    max-width: 85%;
+    height: auto;
+    padding: 0 10px;
+}
+
+#galeria img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+#img-activa {
+    width: 100%;
+    height: auto;
+}
+
+#galeria img:hover {
+    transform: scale(1.05);
+    transform-origin: center;
+    box-shadow: 0px 0px 15px var(--main-color-nav);
+}
+
+/*Contenedor Principal del Lightbox*/
+
+#contenedor-principal {
+    position: fixed;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Contenedor interno del Lightbox*/
+
+#contenedor-interno {
+    display: flex;
+    width: 600px;
+    max-height: 100vh;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+#contenedor-interno img{
+    display: flex;
+    width: auto;
+    max-height: 85vh;
+    justify-content: space-between;
+}
+/*Botones*/
+
+button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+#btn-cierra {
+    color: red;
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    font-size: 3rem;
+}
+
+#btn-retrocede {
+    left: 0px;
+    font-size: 3rem;
+}
+
+#btn-adelanta {
+    right: 0px;
+    font-size: 3rem;
+}
+
+/*PIE DE PÁGINA*/
+
+footer {
+    position: relative;
+    bottom: 0;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+
+.colon {
+    line-height: 20px;
+    background-color: var(--main-color-nav);
+    text-align: center;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 20px;
+}
+
+.colon img {
+    width: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    body {
+        max-width: 100%;
+    }
+
+    #cab {
+        z-index: 1;
+        position: fixed;
+        width: 100%;
+        background-color: var(--main-color-nav);
+    }
+
+    .contenedor {
+        padding: 10px 0px;
+        margin: auto;
+        overflow: visible;
+        width: auto;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .logo {
+        font-weight: 900;
+        font-size: 30px;
+        color: #ffffff;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .redes_nav {
+        display: none;
+    }
+
+    .nav a,
+    .redes_nav a {
+        text-decoration: none;
+        color: white;
+        padding: 5px 10px;
+    }
+
+    #galeria {
+        grid-template-columns: repeat(2, 1fr); /*repeat(auto-fill, minmax(300px, 1fr));*/
+    }
+    #contenedor-interno {
+        display: flex;
+        justify-content: space-around;
+        padding: 50px;
+        margin: auto;
+    }
+    
+    #contenedor-interno img{
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    justify-content: space-around;
+}
+
+    .video_txt {
+        text-align: center;
+        width: 90%;
+        margin: auto;
+        display: block;
+    }
+}
+
