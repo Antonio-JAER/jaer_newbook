@@ -206,7 +206,7 @@ footer {
         overflow: visible;
         width: auto;
         display: flex;
-        flex-flow: column;
+        flex-flow: column-reverse;
         justify-content: space-around;
         align-items: center;
     }
@@ -215,6 +215,7 @@ footer {
         font-weight: 900;
         font-size: 30px;
         color: #ffffff;
+        display: none;
     }
 
     .nav {
@@ -224,7 +225,6 @@ footer {
     }
 
     .redes_nav {
-        display: none;
     }
 
     .nav a,
